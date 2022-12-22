@@ -36,6 +36,24 @@ const cardsList = [
   },
 ]
 
-const App = () => <h1>Replace this element with your code</h1>
+const App = () => (
+  <div className="cards-app-container">
+    <div className="cards-list-container">
+      <h1 className="heading">Learn 4.0 Technologies</h1>
+      <p className="description">
+        Get trained by alumni of IITs and top companies like Amazon, Microsoft,
+        Intel, Nvidia, Qualcomm, etc. Learn directly from professionals involved
+        in Product Development.
+      </p>
+      <ul className="cards-list">
+        {cardsList.map(eachCard => (
+          <CardItem cardDetails={eachCard} key={eachCard.id} />
+        ))}
+      </ul>
+    </div>
+  </div>
+)
 
 export default App
+
+
